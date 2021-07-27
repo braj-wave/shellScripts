@@ -53,6 +53,15 @@ for PKG in "${PKGS[@]}"; do
     sudo pacman -S "$PKG" --noconfirm --needed
 done
 
+## configuring lxdm.conf file
+echo "configuring lxdm.conf file ........."
+
+echo "session=/usr/bin/openbox-session" >> /etc/lxdm/lxdm.conf
+echo "lxdm.service is starting....."
+sudo systemctl enable lxdm.service
+
 echo
 echo "Done!"
 echo
+
+sudo reboot now
