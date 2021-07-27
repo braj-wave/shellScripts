@@ -45,7 +45,8 @@ PKGS=(
 
             ## DisplayManager
             'lxdm-gtk3'               ##Lightweight X11 Display Manager (GTK+ 3 version)
-
+            ### Execution Time need Terminal you can remove it later
+            'xterm'                  ## Openbox needed Terminal
 )
 
 for PKG in "${PKGS[@]}"; do
